@@ -10,6 +10,8 @@ XKCD_ABOUT_PAGE_URL = XKCD_MAIN_PAGE_URL + "about/"
 
 
 class AboutPageVerifications:
+    """This class contains common assertions within the About page."""
+
     def __init__(self, about_page):
         self.about_page = about_page
 
