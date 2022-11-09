@@ -1,0 +1,19 @@
+name: formatting-check
+run-name: Checking the formatting of Python files
+on: [push]
+jobs:
+  check-formatting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - name: Install isort
+      run: python3 -m pip install isort
+    - name: Run isort
+      run: ./.github/scripts/run_isort.sh
+      shell: bash
+    - name: Run black
+      run: ./.github/scripts/run_black.sh
+      shell: bash
