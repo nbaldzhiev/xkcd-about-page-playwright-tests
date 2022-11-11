@@ -1,6 +1,8 @@
 """This module contains auto UI tests for the xkcd About page."""
 import re
+
 from playwright.sync_api import expect
+
 from ui import AboutPage, MainPage
 
 
